@@ -1,5 +1,5 @@
-'use client'
-import React, { useState } from 'react';
+'use client';
+import React, { useState, useEffect } from 'react';
 import styles from './page.module.css';
 
 export default function Home() {
@@ -11,20 +11,38 @@ export default function Home() {
     "You are loved and appreciated!",
   ];
 
-  const [compliment, setCompliment] = useState(compliments[0]); // Initial compliment
+  const [compliment, setCompliment] = useState(compliments[0]);
+  const [isGenerating, setIsGenerating] = useState(false);
+
+  useEffect(() => {
+    // Add a transition effect when updating the compliment
+    const complimentElement = document.querySelector(`.${styles.compliment}`);
+    complimentElement.classList.add(styles.fadeIn);
+    setTimeout(() => {
+      complimentElement.classList.remove(styles.fadeIn);
+    }, 300);
+  }, [compliment]);
 
   const generateCompliment = () => {
-    const randomIndex = Math.floor(Math.random() * compliments.length);
-    const newCompliment = compliments[randomIndex];
-    setCompliment(newCompliment);
+    setIsGenerating(true);
+    setTimeout(() => {
+      const randomIndex = Math.floor(Math.random() * compliments.length);
+      const newCompliment = compliments[randomIndex];
+      setCompliment(newCompliment);
+      setIsGenerating(false);
+    }, 500);
   };
 
   return (
     <main className={styles.main}>
-      <h1>Welcome to the ComplimentMe App!</h1>
-      <p className={styles.description}>Get ready to feel good with personalized compliments!</p>
       <p className={styles.compliment}>{compliment}</p>
-      <button className={styles["generate-button"]} onClick={generateCompliment}>Generate New Compliment</button>
+      <button
+        className={`${styles.generateButton} ${isGenerating ? styles.disabled : ''}`}
+        onClick={generateCompliment}
+        disabled={isGenerating}
+      >
+        {isGenerating ? 'Generating...' : 'Generate New Compliment'}
+      </button>
     </main>
   );
 }
