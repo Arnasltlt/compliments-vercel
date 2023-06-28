@@ -6,41 +6,38 @@
   padding: 2rem;
   min-height: 100vh;
   text-align: center;
-  background-color: #f4f4f4; 
+  background-color: #FFE0B2; 
 }
 
-.complimentContainer {
+/* .complimentContainer {
   margin-top: 2rem;
   padding: 2rem;
   border-radius: 8px;
   text-align: center;
-}
+  background-color: #FFF3E0;
+} */
 
 .compliment {
   font-size: 3.5rem;
   font-weight: bold;
   margin-bottom: 1rem;
   transition: color 0.5s ease;
-  background-color: #add8e6;
+  background-color: #FFF3E0;
   border: 2px solid #ccc;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
   padding: 1rem;
   border-radius: 5px;
-}
-
-.compliment:hover {
-  transform: scale(1.05); 
-  transition: transform 0.3s ease;
+  color: #B71C1C;
 }
 
 .generateButton {
   padding: 1rem;
-  background-color: transparent;
-  border: 2px solid #cb1515;
+  background-color: #C2185B;
+  border: 2px solid #AD1457;
   border-radius: 50px; 
   cursor: pointer;
   font-weight: bold;
-  color: #f40a0a;
+  color: #fff;
   font-size: 1rem;
   text-transform: uppercase;
   transition: all 0.3s ease-in-out;
@@ -57,15 +54,15 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #cb1515;
+  background-color: #AD1457;
   transform: translateY(-100%);
   transition: transform 0.3s ease-in-out;
   z-index: -1;
 }
 
 .generateButton:hover {
-  color: #ffffff;
-  border-color: #ffffff;
+  color: #fff;
+  border-color: #fff;
 }
 
 .generateButton:hover::before {
@@ -87,13 +84,13 @@
   z-index: -2;
 }
 
-@keyframes ripple {
-  0% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(10);
-    opacity: 0;
-  }
+.container {
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  height: 100px;
+  left: 20px;
+  top: 20px;
 }

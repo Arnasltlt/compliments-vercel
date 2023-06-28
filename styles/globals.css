@@ -1,14 +1,14 @@
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: 183, 28, 28;
+  --background-start-rgb: 255, 224, 178;
+  --background-end-rgb: 255, 243, 224;
 
   --primary-glow: conic-gradient(
     from 180deg at 50% 50%,
-    #16abff33 0deg,
-    #0885ff33 55deg,
-    #54d6ff33 120deg,
-    #0071ff33 160deg,
+    #C2185B33 0deg,
+    #AD145733 55deg,
+    #880E4F33 120deg,
+    #611B5133 160deg,
     transparent 360deg
   );
   --secondary-glow: radial-gradient(

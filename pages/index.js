@@ -32,6 +32,12 @@ export default function Home() {
   }, []);
 
   return (
+    <div className={styles.container}>
+    <img 
+      src="https://th.bing.com/th/id/OIG.8N2AATwZ37OS8xWmOzm.?pid=ImgGn" 
+      alt="Sweet Whispers logo" 
+      className={styles.logo} 
+    />
     <main className={styles.main}>
       <div className={styles.complimentContainer}>
         {compliment ? (
@@ -42,9 +48,10 @@ export default function Home() {
             </button>
           </>
         ) : (
-          <p>More...</p>
+          <p>Thinking of how great you are...</p>
         )}
       </div>
     </main>
+  </div>
   );
 }
