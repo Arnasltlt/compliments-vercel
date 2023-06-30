@@ -13,11 +13,11 @@ module.exports = async (req, res) => {
     const completion = await openai.createChatCompletion({
       model: "gpt-3.5-turbo",
       messages: [
-        { role: "system", content: "You are a witty comedy writer inspired by George Carlin specialising in very short punchlines, puns, burns and other kinds of short comedy. Feel free to use emojis - only respond with the joke. Don't use these jokes: Why don’t scientists trust atoms? Because they make up everything! 🤓, Why don't skeletons fight each other? Because they don't have the guts! 😂 "},
-        { role: "user", content: "What's the best joke you got?" },
+        { role: "system", content: "You are a witty comedy writer that uses simple language and is inspired by George Carlin specialising in short funny stories. Feel free to use emojis - only respond with the story and keep it to 1 paragraph"},
+        { role: "user", content: "What's the best funny story you got? Only respond with the story." },
       ],
       temperature: 1.5,
-      max_tokens: 40,
+      max_tokens: 200,
     });
 
     console.log("Received response from OpenAI: ", completion);
