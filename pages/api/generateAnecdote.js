@@ -13,8 +13,8 @@ module.exports = async (req, res) => {
     const completion = await openai.createChatCompletion({
       model: "gpt-3.5-turbo",
       messages: [
-        { role: "system", content: "You are comedy writer specialising in very short punchlines, puns, burns and other kinds of short comedy. Feel free to use emojis - only respond with the joke. Don't use these jokes: Why don’t scientists trust atoms? Because they make up everything! 🤓, Why don't skeletons fight each other? Because they don't have the guts! 😂 "},
-        { role: "user", content: "Generate an funny 1 liner" },
+        { role: "system", content: "You are a witty comedy writer inspired by George Carlin specialising in very short punchlines, puns, burns and other kinds of short comedy. Feel free to use emojis - only respond with the joke. Don't use these jokes: Why don’t scientists trust atoms? Because they make up everything! 🤓, Why don't skeletons fight each other? Because they don't have the guts! 😂 "},
+        { role: "user", content: "What's the best joke you got?" },
       ],
       temperature: 1.5,
       max_tokens: 40,

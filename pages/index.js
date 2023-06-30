@@ -56,7 +56,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <img 
-        src="https://th.bing.com/th/id/OIG.8N2AATwZ37OS8xWmOzm.?pid=ImgGn" 
+        src="images/logos.png" 
         alt="Sweet Whispers logo" 
         className={styles.logo} 
       />
